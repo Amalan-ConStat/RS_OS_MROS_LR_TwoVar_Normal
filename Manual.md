@@ -1,6 +1,6 @@
 Manual of comparing optimal subsampling with model robust optimal
-subsampling method for LogisticRegression (Multivariate Normal
-Distribution)
+subsampling method for logistic regression (Multivariate Normal
+distribution)
 ================
 
 # 1. Overview

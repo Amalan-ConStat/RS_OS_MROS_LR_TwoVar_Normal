@@ -1,5 +1,5 @@
 ---
-title: "Manual of comparing optimal subsampling with model robust optimal subsampling method for LogisticRegression (Multivariate Normal Distribution)"
+title: "Manual of comparing optimal subsampling with model robust optimal subsampling method for logistic regression (Multivariate Normal distribution)"
 output: github_document
 ---
 

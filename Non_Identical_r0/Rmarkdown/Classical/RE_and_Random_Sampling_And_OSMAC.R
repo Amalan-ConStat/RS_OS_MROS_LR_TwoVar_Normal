@@ -3,7 +3,7 @@ library(ezknitr)
 library(rmarkdown)
 
 Model<-c("Model_1","Model_2",
-         "Model_3","Model_4") ; j=4
+         "Model_3","Model_4") ; j=1
 
 for (j in 1:length(Model)) 
 {
@@ -30,7 +30,6 @@ for (j in 1:length(Model))
          params=list("Model_Path"=Model[j]),
          verbose = TRUE,keep_md = FALSE)
   #open_output_dir()
-  
   
   # OSMAC Model Free Method ----
   ezknit(file=here("Non_Identical_r0","Rmarkdown","Classical","OSMAC_Model_Free_Method.Rmd"),

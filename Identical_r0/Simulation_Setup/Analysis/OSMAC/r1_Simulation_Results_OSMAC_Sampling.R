@@ -10,7 +10,7 @@ load(here("Identical_r0","Simulation_Setup","Analysis","OSMAC","Init.RData"))
 #load(here("Init.RData"))
 
 # Load the OSMAC Sample----
-load(here("Identical_r0","Simulation_Setup","Analysis","OSMAC","Run_OSMAC.RData"))
+load(here("Identical_r0","Simulation_Setup","Analysis","OSMAC","r1_Run_OSMAC.RData"))
 #load(here("Run_OSMAC.RData"))
 
 All_Covariates<-c("X0","X1","X2","X1^2","X2^2")
@@ -24,7 +24,7 @@ if(Model_Path=="Model_1")
               All_Covariates[-4],
               All_Covariates) 
   
-  Final_Parameter<-Run_OSMAC(Replicates = Replicates, r1 = r0, r2 = c(100*(2:15)),
+  Final_Parameter<-Run_OSMAC(Replicates = Replicates, r1 = c(100*(1:9)), r2 = 1000,
                              Y = as.matrix(Simulated_Data[[2]]$Assumed_Model_3[,1]),
                              X = as.matrix(Simulated_Data[[2]]$Assumed_Model_3[,-1]),
                              Real_Data = as.matrix(Simulated_Data[[2]]$Real_Model),
@@ -43,7 +43,7 @@ if(Model_Path=="Model_2")
               All_Covariates[-4],
               All_Covariates) 
   
-  Final_Parameter<-Run_OSMAC(Replicates = Replicates, r1 = r0, r2 = c(100*(2:15)),
+  Final_Parameter<-Run_OSMAC(Replicates = Replicates, r1 = c(100*(1:9)), r2 = 1000,
                              Y = as.matrix(Simulated_Data[[2]]$Assumed_Model_3[,1]),
                              X = as.matrix(Simulated_Data[[2]]$Assumed_Model_3[,-1]),
                              Real_Data = as.matrix(Simulated_Data[[2]]$Real_Model),
@@ -62,7 +62,7 @@ if(Model_Path=="Model_3")
               All_Covariates[-5],
               All_Covariates) 
   
-  Final_Parameter<-Run_OSMAC(Replicates = Replicates, r1 = r0, r2 = c(100*(2:15)),
+  Final_Parameter<-Run_OSMAC(Replicates = Replicates, r1 = c(100*(1:9)), r2 = 1000,
                              Y = as.matrix(Simulated_Data[[2]]$Assumed_Model_3[,1]),
                              X = as.matrix(Simulated_Data[[2]]$Assumed_Model_3[,-1]),
                              Real_Data = as.matrix(Simulated_Data[[2]]$Real_Model),
@@ -81,7 +81,7 @@ if(Model_Path=="Model_4")
               All_Covariates[-4],
               All_Covariates[-5]) 
   
-  Final_Parameter<-Run_OSMAC(Replicates = Replicates, r1 = r0, r2 = c(100*(2:15)),
+  Final_Parameter<-Run_OSMAC(Replicates = Replicates, r1 = c(100*(1:9)), r2 = 1000,
                              Y = as.matrix(Simulated_Data[[2]]$Real_Model[,1]),
                              X = as.matrix(Simulated_Data[[2]]$Real_Model[,-1]),
                              Real_Data = as.matrix(Simulated_Data[[2]]$Real_Model),

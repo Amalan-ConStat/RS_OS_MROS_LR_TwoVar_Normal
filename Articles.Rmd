@@ -497,8 +497,10 @@ Theme_special<-function()
         axis.title= element_text(color = "black",face = "bold",size = 12),
         legend.text = element_text(color = "black", size=11),
         legend.position = "bottom",
-        legend.margin=margin(0,0,0,0),
-        legend.box.margin=margin(-1,-2,-1,-2)) 
+        legend.box.margin=margin(0.2,0.4,0.4,0.3,"cm")#,
+        #legend.margin=margin(0.2,0.4,0.4,0.3,"cm"),
+        #plot.margin = margin(0.3,0.5,0.5,0.5,"cm")
+        ) 
 }
 
 #Identical_ro<-Identical_ro[Identical_ro$Subsample_Size %in% seq(100,1000,100),]

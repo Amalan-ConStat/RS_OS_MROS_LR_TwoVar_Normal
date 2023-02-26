@@ -6,12 +6,12 @@ library(LaplacesDemon)
 enableJIT(1)
 
 # Load the No Correlated Data----
-load(here("Identical_r0","Simulation_Setup","Analysis","OSMAC","Init.RData"))
-#load(here("Init.RData"))
+#load(here("Identical_r0","Simulation_Setup","Analysis","OSMAC","Init.RData"))
+load(here("Init.RData"))
 
 # Load the OSMAC Sample----
-load(here("Identical_r0","Simulation_Setup","Analysis","OSMAC","r1_Run_OSMAC.RData"))
-#load(here("Run_OSMAC.RData"))
+#load(here("Identical_r0","Simulation_Setup","Analysis","OSMAC","r1_Run_OSMAC.RData"))
+load(here("Run_OSMAC.RData"))
 
 All_Covariates<-c("X0","X1","X2","X1^2","X2^2")
 
@@ -31,7 +31,8 @@ if(Model_Path=="Model_1")
                              N = Simulated_Data$Basic$N,
                              alpha = rep(1/4,length(combs)+1),
                              combs = combs,
-                             All_Covariates = All_Covariates)
+                             All_Covariates = All_Covariates,
+                             Theta=Simulated_Data$Basic$Theta)
 }
 
 # Model 2----
@@ -50,7 +51,8 @@ if(Model_Path=="Model_2")
                              N = Simulated_Data$Basic$N,
                              alpha = rep(1/4,length(combs)+1),
                              combs = combs,
-                             All_Covariates = All_Covariates)
+                             All_Covariates = All_Covariates,
+                             Theta=Simulated_Data$Basic$Theta)
 }
 
 # Model 3----
@@ -69,7 +71,8 @@ if(Model_Path=="Model_3")
                              N = Simulated_Data$Basic$N,
                              alpha = rep(1/4,length(combs)+1),
                              combs = combs,
-                             All_Covariates = All_Covariates)
+                             All_Covariates = All_Covariates,
+                             Theta=Simulated_Data$Basic$Theta)
 }
 
 # Model 4----
@@ -88,5 +91,6 @@ if(Model_Path=="Model_4")
                              N = Simulated_Data$Basic$N,
                              alpha = rep(1/4,length(combs)+1),
                              combs = combs,
-                             All_Covariates = All_Covariates)
+                             All_Covariates = All_Covariates,
+                             Theta=Simulated_Data$Basic$Theta)
 }

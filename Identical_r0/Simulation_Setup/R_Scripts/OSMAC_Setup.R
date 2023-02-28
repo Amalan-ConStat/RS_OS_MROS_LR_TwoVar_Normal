@@ -183,12 +183,12 @@ Run_OSMAC<-function(Replicates,r1,r2,Y,X,Real_Data,N,alpha,combs,All_Covariates,
   
   save(list= c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
                ),
-       file = here(#"Identical_r0","Simulation_Setup","Analysis","OSMAC",
+       file = here("Identical_r0","Simulation_Setup","Analysis","OSMAC",
                    "Results","Real_Model","OSMAC_output.RData"))
   
-  # save(list = c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
-  #               ),
-  #      file = here("Identical_r0","Outputs",Model_Path,"OSMAC","Real_Model","OSMAC_output.RData"))
+  save(list = c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
+                ),
+       file = here("Identical_r0","Outputs",Model_Path,"OSMAC","Real_Model","OSMAC_output.RData"))
   
   # Assumed Model Old
   for (j in 1:length(combs)) 
@@ -233,13 +233,13 @@ Run_OSMAC<-function(Replicates,r1,r2,Y,X,Real_Data,N,alpha,combs,All_Covariates,
     
     save(list= c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
                  ),
-         file = here(#"Identical_r0","Simulation_Setup","Analysis","OSMAC",
+         file = here("Identical_r0","Simulation_Setup","Analysis","OSMAC",
                      "Results","Assumed_Model",paste0("OSMAC_output_Old_",j,".RData")))
     
-    # save(list = c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
-    #               ),
-    #      file = here("Identical_r0","Outputs",Model_Path,"OSMAC",
-    #                  "Assumed_Model",paste0("OSMAC_output_Old_",j,".RData")))
+    save(list = c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
+                  ),
+         file = here("Identical_r0","Outputs",Model_Path,"OSMAC",
+                     "Assumed_Model",paste0("OSMAC_output_Old_",j,".RData")))
     
     # Assumed Model New
     Final_param_mMSE<-do.call(rbind,get(paste0("Parameter_Assumed_New_mMSE_",j)))
@@ -282,13 +282,13 @@ Run_OSMAC<-function(Replicates,r1,r2,Y,X,Real_Data,N,alpha,combs,All_Covariates,
     
     save(list= c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
                 ),
-    file = here(#"Identical_r0","Simulation_Setup","Analysis","OSMAC",
+    file = here("Identical_r0","Simulation_Setup","Analysis","OSMAC",
                 "Results","Assumed_Model",paste0("OSMAC_output_New_",j,".RData")))
     
-    # save(list = c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
-    #               ),
-    # file = here("Identical_r0","Outputs",Model_Path,"OSMAC",
-    #             "Assumed_Model",paste0("OSMAC_output_New_",j,".RData")))
+    save(list = c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
+                  ),
+    file = here("Identical_r0","Outputs",Model_Path,"OSMAC",
+                "Assumed_Model",paste0("OSMAC_output_New_",j,".RData")))
   }
   
   # Model Free
@@ -332,12 +332,12 @@ Run_OSMAC<-function(Replicates,r1,r2,Y,X,Real_Data,N,alpha,combs,All_Covariates,
   
   save(list= c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
                ),
-       file = here(#"Identical_r0","Simulation_Setup","Analysis","OSMAC",
+       file = here("Identical_r0","Simulation_Setup","Analysis","OSMAC",
                     "Results","ModelFree","OSMAC_output.RData"))
   
-  # save(list = c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
-  #               ),
-  #      file = here("Identical_r0","Outputs",Model_Path,"OSMAC","ModelFree","OSMAC_output.RData"))
+  save(list = c("Results_OSMAC","Bias_OSMAC","Utility_OSMAC"#,"Sample_OSMAC","Probability"
+                ),
+       file = here("Identical_r0","Outputs",Model_Path,"OSMAC","ModelFree","OSMAC_output.RData"))
 }
 
 Run_OSMAC<-cmpfun(Run_OSMAC)
